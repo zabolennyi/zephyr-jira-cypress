@@ -3,10 +3,12 @@ Integration of ZAPI (Zephyr Api) with Cypress
 
 To run it locally you need to set some variables in zephys.js file. There are credentials/api keys from your Jira account. Also as a preconditions: you need to have [Zephyr](https://marketplace.atlassian.com/apps/1014681/zephyr-for-jira-test-management) and [ZAPI](https://marketplace.atlassian.com/apps/1211674/zapi) plugins already installed in your Jira project. 
 
-
+## Variables Description
 Variables to put in zephys.js file:
 1. **zapiAccessKey**. To obtain ZAPI Access Key, navigate to your Jira, select Zephyr tab, then API Keys, and click to generate Api Keys. Copy Access Key.
-<img src="img/zephyr_tab.png" width="200"><img src="img/api_keys_tab.png" width="200" height="400"><img src="img/generate_zapi_api_keys.png" width="200">
+
+<img src="img/zephyr_tab.png" width="200"><img src="img/api_keys_tab.png" width="200" height="400">
+<img src="img/generate_zapi_api_keys.png" width="200">
 
 2. **zapiSecretKey**. To obtain ZAPI Secret Key, navigate to your Jira, select Zephyr tab, then API Keys, and click to generate Api Keys. Copy Secret Key.
 
@@ -15,8 +17,10 @@ Variables to put in zephys.js file:
 
 4. **jiraUserAuth**. This is API token for your JIRA user. First, you need to generate API token for your Jira user, for this navigate to `Profile - Manage your account - Security - API token` anc click on `Create and manage API tokens` then `Create API token` button. Fill the label field, and copy new generated api token. Now we need to BASE64 encode user credentials.
 On Linux/Unix/MacOS: 
-`echo -n test@test.com:api_token_string | base64`
-where `test#test.com` is your email and `api_token_string` is the Api token that we created earlier. The output will be used as `jiraUserAuth` variable. 
+```
+echo -n test@test.com:api_token_string | base64
+```
+where `test@test.com` is your email and `api_token_string` is the Api token that we created earlier. The output will be used as `jiraUserAuth` variable. 
 <img src="img/user_privacy.png" width="200"><img src="img/jira_user_api_key.png" width="200">
 
 5. **jiraDomain**. This is the domain of your jira project.
@@ -58,4 +62,9 @@ e.x. `10001`
  e.x. `test`
   <img src="img/testStepName.png" width="200">
 
-To open Cypress in local run `npm run cy:open` which will open Cypress locally. Select the test which you'd like to run and execute it.
+## Run it locally
+To open Cypress in local run 
+```
+npm run cy:open
+``` 
+which will open Cypress locally. Select the test which you'd like to run and execute it.
