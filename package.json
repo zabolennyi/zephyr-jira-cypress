@@ -1,0 +1,37 @@
+{
+  "name": "zephyr-jira-cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "./node_modules/.bin/cypress open"
+  },
+  "author": "Serhii Zabolennyi",
+  "license": "ISC",
+  "description": "Integration of ZAPI (Zephyr API) with Cypress",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zabolennyi/zephyr-jira-cypress.git"
+  },
+  "keywords": [
+    "Cypress",
+    "Zephyr",
+    "Jira",
+    "ZAPI"
+  ],
+  "bugs": {
+    "url": "https://github.com/zabolennyi/zephyr-jira-cypress/issues"
+  },
+  "homepage": "https://github.com/zabolennyi/zephyr-jira-cypress#readme",
+  "dependencies": {
+    "atlassian-jwt": "^1.0.2",
+    "chai": "^4.2.0",
+    "jquery": "^3.4.1",
+    "json-web-token": "^3.2.0",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "cypress": "^3.4.1",
+    "cypress-log-to-output": "^1.0.4"
+  }
+}
